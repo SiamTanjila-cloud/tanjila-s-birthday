@@ -1736,7 +1736,7 @@
 
         .click-heart {
             position: fixed;
-            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-size: clamp(0.6rem, 1.5vw, 1rem);
             pointer-events: none;
             animation: floatUpFade 1.2s ease-out forwards;
             z-index: 99999;
@@ -2498,7 +2498,7 @@
         }
 
         // --- Time Together Counter ---
-        const startDate = new Date("2022-01-01T00:00:00").getTime();
+        const startDate = new Date("2023-02-01T00:00:00").getTime();
 
         function updateCounter() {
             const now = new Date().getTime();
@@ -2566,7 +2566,7 @@
 
         // --- Main Text Typing ---
         const romanticTexts = [
-            "Happy Birthday, Tanjila 🎉 Today is the most special day for me, because it gave me you. You are the reason behind my smiles, my peace when everything feels heavy, and the most beautiful part of my life that I never want to lose.",
+            "Happy Birthday, Tanjila , Today is the most special day for me, because it gave me you. You are the reason behind my smiles, my peace when everything feels heavy, and the most beautiful part of my life that I never want to lose.",
 
             "I don’t just celebrate your birthday, I celebrate your existence. The way you talk, your smile, your little things—everything about you makes my world brighter. You turned my ordinary life into something magical without even trying.",
 
@@ -2620,7 +2620,8 @@
         document.addEventListener("pointerdown", function (e) {
             if (e.target.closest('button') || e.target.closest('.gift-box') || e.target.closest('.book-page') || e.target.closest('.polaroid')) return;
             const heart = document.createElement("div");
-            const icons = ['love you Too much💖', 'Happy Birthday ✨', 'You are my everything 🌸', 'You are the best💫', 'My forever ❤️', 'My sunshine ☀️', 'My queen 👑', 'My heartbeat 💓', 'Always yours 💞', 'Endless love 💘']; heart.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+            const icons = ['love you Too much💖', 'Happy Birthday ✨', 'You are my everything 🌸', 'You are the best💫', 'My forever ❤️', 'My sunshine ☀️', 'My queen 👑', 'My heartbeat 💓', 'Always yours 💞', 'Endless love 💘'];
+            heart.innerHTML = icons[Math.floor(Math.random() * icons.length)];
             heart.classList.add("click-heart");
             heart.style.left = `${e.clientX - 15}px`; heart.style.top = `${e.clientY - 15}px`;
             document.body.appendChild(heart);
